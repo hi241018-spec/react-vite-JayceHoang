@@ -15,11 +15,18 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    children: [
+      {
+        path: "/users",
+        element: <UserPage />
+      },
+      {
+        path: "/products",
+        element: <ProductsPage />
+      },
+    ]
   },
-  {
-    path: "/users",
-    element: <UserPage />
-  },
+
   {
     path: "/register",
     element: <RegisterPage />
@@ -28,10 +35,7 @@ const router = createBrowserRouter([
     path: "/login",
     element: <LoginPage />,
   },
-  {
-    path: "/products",
-    element: <ProductsPage />
-  },
+
 ]);
 
 
